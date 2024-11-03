@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 container mx-auto px-6">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,10 +28,10 @@ const NavBar = () => {
                     <NavLink to="/dashboard">Dashboard</NavLink> 
                     </ul>
                 </div>
-                <Link to="/" className=" text-xl">Cook Book</Link>
+                <Link to="/" className=" text-4xl font-semibold">Cook Book</Link>
             </div>
             <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-8">
+                <ul className="menu menu-horizontal px-1 gap-8 font-bold">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/coffees">Coffees</NavLink>
                     <NavLink to="/dashboard">Dashboard</NavLink>
