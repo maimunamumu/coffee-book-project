@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Categories = ({ categories }) => {
@@ -7,7 +7,8 @@ const Categories = ({ categories }) => {
         <div role="tablist" className="tabs tabs-lifted">
             {
               categories.map(category => (
-                 <Link to={`/category/${category.category}`} key={category.category} role="tab" className="tab">{category.category}</Link>))
+                 <NavLink to={`/category/${category.category}`} key={category.category} role="tab" className={({isActive}) => `tab text-2xl font-thin ${isActive ? 'tab-active':''}`}>{category.category}
+                 </NavLink>))
             }
 </div>
     );
